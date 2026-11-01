@@ -17,7 +17,7 @@ The full fitted pipeline is saved in `models/iris_model.joblib`.
 ```powershell
 python app.py
 ```
-Open http://127.0.0.1:5000/ . Keep this terminal running.
+
 
 ## Run API tests (in a second terminal)
 ```powershell
@@ -32,6 +32,6 @@ $body = @{
   "petal length (cm)" = 1.4
   "petal width (cm)" = 0.2
 } | ConvertTo-Json
-Invoke-RestMethod -Uri "http://127.0.0.1:5000/predict" -Method Post -ContentType "application/json" -Body $body
+
 ```
 The prediction response contains the species and probabilities. This is an educational example using the public Iris dataset. Load Joblib/Pickle files only from trusted sources.
